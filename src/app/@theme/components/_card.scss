@@ -1,0 +1,25 @@
+.card {
+  // padding: 30px;
+  padding: 16px;
+  box-shadow: 0px 10px 40px 1px rgba(35, 94, 234, 0.05);
+  border-radius: 8px;
+  background: white;
+  position: relative;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  overflow: hidden;
+
+  &--fullHeight {
+    height: 100%;
+  }
+
+  &__img {
+    margin: -16px -16px 0;
+    margin-bottom: 16px;
+    background: #e1e1e1;
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

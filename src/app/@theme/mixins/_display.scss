@@ -1,0 +1,33 @@
+@mixin generate-display-class() {
+  .sm\:hidden {
+    display: none;
+  }
+  .sm\:flex {
+    display: flex;
+  }
+  .sm\:block {
+    display: block;
+  }
+  @media (min-width: $medium) {
+    .md\:hidden {
+      display: none;
+    }
+    .md\:flex {
+      display: flex;
+    }
+    .md\:block {
+      display: block;
+    }
+  }
+  @media (min-width: $large) {
+    .lg\:hidden {
+      display: none;
+    }
+    .lg\:flex {
+      display: flex;
+    }
+    .lg\:block {
+      display: block;
+    }
+  }
+}

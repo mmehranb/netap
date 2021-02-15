@@ -1,0 +1,65 @@
+.t-h3 {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.t-h4 {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.t-smallButton {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.t-tiny {
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.t-tiny-sub {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.t-sub {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.t-content-main {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.t-title-main {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@media (min-width: $large) {
+  .t-h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .t-h4 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .t-tiny,
+  .t-sub {
+    font-size: 14px;
+  }
+}

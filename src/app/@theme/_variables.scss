@@ -1,0 +1,68 @@
+//BreakPoint
+$small: 0;
+$medium: 767px;
+$large: 1023px;
+$xlarge: 1200px;
+$xxlarge: 1440px;
+
+//Colors
+$blue: #235eea;
+$darkBlue: #224698;
+$orange: #f7ab08;
+$green: #11e68b;
+$red: #ef5350;
+$darkRed: #a73a38;
+$black: #212121;
+$darkestGray: #7e8187;
+$lightestGray: #f9fbfe;
+$white: #fff;
+
+//Mixins Arguments
+$margin-config: 0 2 4 8 16 24 32 40 48;
+$padding-config: 0 2 4 8 16 24 32 40 48;
+$size: 40 30 22 18 16 14 12 10;
+
+$color-list: (
+  c-black: #000,
+  c-darkestGray: #7e8187,
+  c-white: #fff,
+);
+
+$typography: (
+  text-40: (
+    40,
+    56,
+  ),
+  text-32: (
+    32,
+    48,
+  ),
+  text-24: (
+    24,
+    32,
+  ),
+  text-18: (
+    18,
+    24,
+  ),
+  text-16: (
+    16,
+    32,
+  ),
+  text-14: (
+    14,
+    24,
+  ),
+  text-12: (
+    12,
+    20,
+  ),
+  text-10: (
+    10,
+    18,
+  ),
+  text-8: (
+    8,
+    14,
+  ),
+);

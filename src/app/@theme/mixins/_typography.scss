@@ -1,0 +1,58 @@
+@mixin generate-typography-class($typography) {
+  @media (min-width: $small) {
+    @each $key in map_keys($typography) {
+      .sm\:#{$key} {
+        font-size: #{nth(map_get($typography, $key), 1) + "px"};
+        line-height: #{nth(map_get($typography, $key), 2) + "px"};
+        font-weight: bold;
+      }
+    }
+    .sm\:text-center {
+      text-align: center;
+    }
+    .sm\:text-right {
+      text-align: right;
+    }
+    .sm\:text-left {
+      text-align: left;
+    }
+  }
+  @media (min-width: $medium) {
+    @each $key in map_keys($typography) {
+      .md\:#{$key} {
+        font-size: #{nth(map_get($typography, $key), 1) + "px"};
+        line-height: #{nth(map_get($typography, $key), 2) + "px"};
+        font-weight: bold;
+      }
+    }
+    .md\:text-center {
+      text-align: center;
+    }
+    .md\:text-right {
+      text-align: right;
+    }
+    .md\:text-left {
+      text-align: left;
+    }
+  }
+  @media (min-width: $large) {
+    @each $key in map_keys($typography) {
+      .lg\:#{$key} {
+        font-size: #{nth(map_get($typography, $key), 1) + "px"};
+        line-height: #{nth(map_get($typography, $key), 2) + "px"};
+        font-weight: bold;
+      }
+    }
+    .lg\:text-center {
+      text-align: center;
+    }
+    .lg\:text-right {
+      text-align: right;
+    }
+    .lg\:text-left {
+      text-align: left;
+    }
+  }
+
+  //text Align
+}

@@ -1,0 +1,25 @@
+.cells {
+  margin: -8px;
+  display: flex;
+  flex-flow: row wrap;
+
+  & > .cell {
+    padding: 8px;
+  }
+
+  &--gap8 {
+    margin: -4px;
+
+    & > .cell {
+      padding: 4px;
+    }
+  }
+
+  &--gap12 {
+    margin: -6px;
+
+    & > .cell {
+      padding: 6px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.tag {
+  padding: 1px 8px;
+  border-radius: 10px;
+  line-height: 20px;
+  font-weight: bold;
+  font-size: 12px;
+
+  &__success {
+    background: #e1fbee;
+    color: #22cb6a;
+  }
+
+  &__warning {
+    background: #fffbf3;
+    color: #f7ab08;
+  }
+
+  &__reject {
+    background: #fef6f6;
+    color: #ef5350;
+  }
+
+  &__pending {
+    background: #f4f7fe;
+    color: #235eea;
+  }
+}

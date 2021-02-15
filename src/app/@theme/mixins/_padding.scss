@@ -1,0 +1,70 @@
+@mixin generate-p-class($p-config) {
+  @each $i in $p-config {
+    @media (min-width: $small) {
+      .sm\:px-#{$i} {
+        padding-right: #{$i + "px"};
+        padding-left: #{$i + "px"};
+      }
+      .sm\:py-#{$i} {
+        padding-top: #{$i + "px"};
+        padding-bottom: #{$i + "px"};
+      }
+      .sm\:pl-#{$i} {
+        padding-left: #{$i + "px"};
+      }
+      .sm\:pr-#{$i} {
+        padding-right: #{$i + "px"};
+      }
+      .sm\:pt-#{$i} {
+        padding-top: #{$i + "px"};
+      }
+      .sm\:pb-#{$i} {
+        padding-bottom: #{$i + "px"};
+      }
+    }
+    @media (min-width: $medium) {
+      .md\:px-#{$i} {
+        padding-right: #{$i + "px"};
+        padding-left: #{$i + "px"};
+      }
+      .md\:py-#{$i} {
+        padding-top: #{$i + "px"};
+        padding-bottom: #{$i + "px"};
+      }
+      .md\:pl-#{$i} {
+        padding-left: #{$i + "px"};
+      }
+      .md\:pr-#{$i} {
+        padding-right: #{$i + "px"};
+      }
+      .md\:pt-#{$i} {
+        padding-top: #{$i + "px"};
+      }
+      .md\:pb-#{$i} {
+        padding-bottom: #{$i + "px"};
+      }
+    }
+    @media (min-width: $large) {
+      .lg\:px-#{$i} {
+        padding-right: #{$i + "px"};
+        padding-left: #{$i + "px"};
+      }
+      .lg\:py-#{$i} {
+        padding-top: #{$i + "px"};
+        padding-bottom: #{$i + "px"};
+      }
+      .lg\:pl-#{$i} {
+        padding-left: #{$i + "px"};
+      }
+      .lg\:pr-#{$i} {
+        padding-right: #{$i + "px"};
+      }
+      .lg\:pt-#{$i} {
+        padding-top: #{$i + "px"};
+      }
+      .lg\:pb-#{$i} {
+        padding-bottom: #{$i + "px"};
+      }
+    }
+  }
+}

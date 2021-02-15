@@ -1,0 +1,43 @@
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  outline: 0;
+  cursor: pointer;
+  font-size: 12px;
+
+  &-square {
+    width: 24px;
+    height: 24px;
+    border: solid 1px var(--primary-light-1-x-style);
+    color: var(--primary-light-1-x-style);
+
+    &__red {
+      border-color: var(--status-red-style);
+      background-color: var(--status-red-light-style);
+      color: var(--status-red-style);
+    }
+
+    &__yellow {
+      border-color: #f7ab08;
+      background: #fffbf3;
+      color: #f7ab08;
+    }
+
+    &__blue {
+      border-color: #235eea;
+      background: #f4f7fe;
+      color: #235eea;
+    }
+  }
+
+  @media (min-width: $small) and (max-width: $medium) {
+    border-radius: 6px;
+    &-square {
+      width: 24px;
+      height: 24px;
+      font-size: 12px;
+    }
+  }
+}

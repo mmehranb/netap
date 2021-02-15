@@ -1,0 +1,60 @@
+$grid-columns: 2 3 4 5 6 12;
+
+@mixin ctrl-grid-system() {
+  @media (min-width: $small) {
+    .sm\:w-full {
+      width: 100%;
+    }
+    .sm\:w-fit {
+      flex: 1 1 0;
+    }
+    .sm\:w-shrink {
+      flex: 0 0 auto;
+    }
+  }
+  @media (min-width: $medium) {
+    .md\:w-full {
+      width: 100%;
+    }
+    .md\:w-fit {
+      flex: 1 1 0;
+    }
+    .md\:w-shrink {
+      flex: 0 0 auto;
+    }
+  }
+  @media (min-width: $large) {
+    .lg\:w-full {
+      width: 100%;
+    }
+    .lg\:w-fit {
+      flex: 1 1 0;
+    }
+    .lg\:w-shrink {
+      flex: 0 0 auto;
+    }
+  }
+  @each $i in $grid-columns {
+    @for $j from 1 to $i {
+      @media (min-width: $small) {
+        .sm\:w-#{$j}\/#{$i} {
+          width: calc(100% * #{$j + "/" +$i});
+        }
+      }
+      @media (min-width: $medium) {
+        .md\:w-#{$j}\/#{$i} {
+          width: calc(100% * #{$j + "/" +$i});
+        }
+      }
+      @media (min-width: $large) {
+        .lg\:w-#{$j}\/#{$i} {
+          width: calc(100% * #{$j + "/" +$i});
+        }
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+}

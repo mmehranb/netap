@@ -1,0 +1,70 @@
+@mixin generate-m-class($m-config) {
+  @each $i in $m-config {
+    .sm\:mx-#{$i} {
+      margin-right: #{$i + "px"};
+      margin-left: #{$i + "px"};
+    }
+    .sm\:my-#{$i} {
+      margin-top: #{$i + "px"};
+      margin-bottom: #{$i + "px"};
+    }
+    .sm\:ml-#{$i} {
+      margin-left: #{$i + "px"};
+    }
+    .sm\:mr-#{$i} {
+      margin-right: #{$i + "px"};
+    }
+    .sm\:mt-#{$i} {
+      margin-top: #{$i + "px"};
+    }
+    .sm\:mb-#{$i} {
+      margin-bottom: #{$i + "px"};
+    }
+    @media (min-width: $small) {
+    }
+    @media (min-width: $medium) {
+      .md\:mx-#{$i} {
+        margin-right: #{$i + "px"};
+        margin-left: #{$i + "px"};
+      }
+      .md\:my-#{$i} {
+        margin-top: #{$i + "px"};
+        margin-bottom: #{$i + "px"};
+      }
+      .md\:ml-#{$i} {
+        margin-left: #{$i + "px"};
+      }
+      .md\:mr-#{$i} {
+        margin-right: #{$i + "px"};
+      }
+      .md\:mt-#{$i} {
+        margin-top: #{$i + "px"};
+      }
+      .md\:mb-#{$i} {
+        margin-bottom: #{$i + "px"};
+      }
+    }
+    @media (min-width: $large) {
+      .lg\:mx-#{$i} {
+        margin-right: #{$i + "px"};
+        margin-left: #{$i + "px"};
+      }
+      .lg\:my-#{$i} {
+        margin-top: #{$i + "px"};
+        margin-bottom: #{$i + "px"};
+      }
+      .lg\:ml-#{$i} {
+        margin-left: #{$i + "px"};
+      }
+      .lg\:mr-#{$i} {
+        margin-right: #{$i + "px"};
+      }
+      .lg\:mt-#{$i} {
+        margin-top: #{$i + "px"};
+      }
+      .lg\:mb-#{$i} {
+        margin-bottom: #{$i + "px"};
+      }
+    }
+  }
+}

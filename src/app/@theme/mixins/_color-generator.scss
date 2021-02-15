@@ -1,0 +1,15 @@
+@mixin color-generator($colors) {
+  @each $key in map_keys($colors) {
+    .#{$key} {
+      color: nth(map_get($colors, $key), 1);
+    }
+  }
+
+  .black-c {
+    color: #000 !important;
+  }
+
+  .white-c {
+    color: #fff !important;
+  }
+}
