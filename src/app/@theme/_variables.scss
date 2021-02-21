@@ -18,11 +18,12 @@ $lightestGray: #f9fbfe;
 $white: #fff;
 
 //Mixins Arguments
-$margin-config: 0 2 4 8 16 24 32 40 48;
-$padding-config: 0 2 4 8 16 24 32 40 48;
+$margin-config: 0 2 4 8 10 16 24 32 40 48;
+$padding-config: 0 2 4 8 10 16 24 32 40 48;
 $size: 40 30 22 18 16 14 12 10;
 
 $color-list: (
+  c-blue: #3173ed,
   c-black: #000,
   c-darkestGray: #7e8187,
   c-white: #fff,

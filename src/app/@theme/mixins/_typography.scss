@@ -4,7 +4,7 @@
       .sm\:#{$key} {
         font-size: #{nth(map_get($typography, $key), 1) + "px"};
         line-height: #{nth(map_get($typography, $key), 2) + "px"};
-        font-weight: bold;
+        font-weight: normal;
       }
     }
     .sm\:text-center {
@@ -22,7 +22,7 @@
       .md\:#{$key} {
         font-size: #{nth(map_get($typography, $key), 1) + "px"};
         line-height: #{nth(map_get($typography, $key), 2) + "px"};
-        font-weight: bold;
+        font-weight: normal;
       }
     }
     .md\:text-center {
@@ -40,7 +40,7 @@
       .lg\:#{$key} {
         font-size: #{nth(map_get($typography, $key), 1) + "px"};
         line-height: #{nth(map_get($typography, $key), 2) + "px"};
-        font-weight: bold;
+        font-weight: normal;
       }
     }
     .lg\:text-center {

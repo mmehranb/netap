@@ -1,0 +1,66 @@
+<div class="flex flex-col js-{{ formCtrlName }}" [formGroup]="form">
+  <div
+    class="field {{ field }} {{ fieldClass }}"
+    #filedPart
+    [ngClass]="{
+      field__active: handleActiveClass || inputFocus,
+      field__invalid: handleValidation?.msg
+    }"
+    [ngSwitch]="field"
+  >
+    <ng-container *ngSwitchCase="'input'">
+      <input
+        autocomplete="off"
+        [type]="fieldType"
+        [id]="formCtrlName"
+        [attr.inputmode]="inputMode"
+        [formControlName]="formCtrlName"
+        (focus)="inputFocus = true && !readOnly"
+        (focusout)="inputFocus = false"
+        (click)="emitOnClick($event)"
+        (keyup)="emitOnKeyup($event)"
+        placeHolderCharacter=""
+        thousandSeparator=","
+        class="field-value"
+        [attr.disabled]="fieldClass.includes('disable') ? true : null"
+        [attr.readonly]="readOnly ? true : null"
+        autocomplete="off"
+      />
+      <button
+        type="button"
+        *ngIf="handleActiveClass && !fieldClass.includes('disable')"
+        class="formFieldAction"
+        (click)="clearValue()"
+      >
+        <i class="icon-circular-close"></i>
+      </button>
+    </ng-container>
+    <textarea
+      *ngSwitchCase="'textarea'"
+      [id]="formCtrlName"
+      [formControlName]="formCtrlName"
+      (focus)="inputFocus = true && !readOnly"
+      (focusout)="inputFocus = false"
+      class="field-value field-value__textarea"
+      rows="1"
+      #textareaPart
+      (keyup)="textAreaAdjust(filedPart, textareaPart)"
+    >
+    </textarea>
+    <label
+      [for]="formCtrlName"
+      class="field-label"
+      (click)="emitOnClick($event)"
+      >{{ label }}</label
+    >
+  </div>
+  <small
+    class="filedHelp filedHelp__invalid"
+    [@fadeInOutAnimation]
+    *ngIf="handleValidation?.msg; else elseBlock"
+    >{{ handleValidation.msg }}</small
+  >
+  <ng-template #elseBlock>
+    <small class="filedHelp" *ngIf="helpDesc">{{ helpDesc }}</small>
+  </ng-template>
+</div>

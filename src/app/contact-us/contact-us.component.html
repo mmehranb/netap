@@ -1,16 +1,57 @@
 <section class="section">
-  <div class="container">
-    <h2 class="sm:w-full">دوست داریم با شما بیشتر آشنا شویم...</h2>
-    <p class="sm:w-full">
-      شما یک کارآفرین هستید یا ایده شخصی دارید، شاید هم فردی هستید که مایل به پویایی سرمایه گذاری خود است، به هر حال ما
-      دوست داریم از شما بشنویم. در صورت تمایل به ما نظر خود را بیان کنید یا سوال خود را از info@netap.ir بپرسید، همچنین
-      می توانید فرم تماس زیر را پر کنید و با هم در تماس باشیم.
-    </p>
-    <div class="cells">
-      <div class="cell sm:w-full md:w-50"></div>
-      <div class="cell sm:w-full md:w-50"></div>
-      <div class="cell sm:w-full"></div>
-      <div class="cell sm:w-full"></div>
+  <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="container sm:text-center">
+      <h2 class="lg:text-40 lg:mb-24 c-blue sm:w-full">
+        دوست داریم با شما بیشتر آشنا شویم...
+      </h2>
+      <p class="sm:text-14 sm:w-fit sm:mb-32 sm:w-full">
+        شما یک کارآفرین هستید یا ایده شخصی دارید، شاید هم فردی هستید که مایل به
+        پویایی سرمایه گذاری خود است، به هر حال ما دوست داریم از شما بشنویم. در
+        صورت تمایل به ما نظر خود را بیان کنید یا سوال خود را از info@netap.ir
+        بپرسید، همچنین می توانید فرم تماس زیر را پر کنید و با هم در تماس باشیم.
+      </p>
+      <div class="cells sm:w-full">
+        <div class="cell sm:w-full md:w-1/2">
+          <form-field
+            [form]="form"
+            [formCtrlName]="'fullName'"
+            [label]="'نام و نام خانوادگی'"
+            [handleValidation]="formErrors.fullName"
+          >
+          </form-field>
+        </div>
+        <div class="cell sm:w-full md:w-1/2">
+          <form-field
+            [form]="form"
+            [formCtrlName]="'email'"
+            [label]="'ایمیل'"
+            [handleValidation]="formErrors.email"
+          >
+          </form-field>
+        </div>
+        <div class="cell sm:w-full">
+          <form-field
+            [form]="form"
+            [formCtrlName]="'title'"
+            [label]="'عنوان پیام'"
+            [handleValidation]="formErrors.title"
+          >
+          </form-field>
+        </div>
+        <div class="cell sm:w-full">
+          <form-field
+            [form]="form"
+            [field]="'textarea'"
+            [formCtrlName]="'text'"
+            [label]="'متن پیام'"
+            [handleValidation]="formErrors.text"
+          >
+          </form-field>
+        </div>
+      </div>
+      <div class="sm:w-full md:w-1/2 lg:w-1/3">
+        <button class="btn btn--primary" type="submit">ثبت</button>
+      </div>
     </div>
-  </div>
+  </form>
 </section>

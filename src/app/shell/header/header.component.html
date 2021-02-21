@@ -1,8 +1,11 @@
-<header class="header">
+<header
+  class="header flex al-center"
+  [ngClass]="{ 'header--transparent': router.url.endsWith('/') }"
+>
   <div class="container jus-between al-center">
     <div class="sm:w-shrink">
       <a href="/">
-        <img src="/assets/media/netap-logo.png" alt="">
+        <img src="/assets/media/netap-logo.png" alt="" />
       </a>
     </div>
     <div class="sm:w-shrink">

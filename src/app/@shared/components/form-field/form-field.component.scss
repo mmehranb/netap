@@ -1,0 +1,185 @@
+$form-el-height: 40;
+$el-padding: 40;
+
+.field {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  min-height: #{$form-el-height}px;
+  border-radius: 8px;
+  border: 1px solid #c2c9d5;
+  position: relative;
+  margin-bottom: 12px;
+
+  .field-value {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    outline: 0;
+    text-align: right;
+    direction: rtl;
+    padding-left: 25px;
+    padding-right: 16px;
+    font-size: 14px;
+    background: transparent;
+    color: #212121;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: 0;
+
+    &__textarea {
+      font-family: inherit;
+      padding-top: 0;
+      padding-bottom: 0;
+      box-sizing: border-box;
+      margin: 0;
+      resize: none;
+      margin: 10px 0;
+      resize: none;
+      white-space: break-spaces;
+      height: calc(100% - 20px);
+      overflow-y: auto;
+    }
+  }
+
+  .field-label {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    padding: 0 6px;
+    margin: 0;
+    transform: translateY(-50%);
+    transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+    background-color: transparent;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: right;
+    color: #7e8187;
+
+    &::after {
+      content: "";
+      height: 4px;
+      width: 100%;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+      background: white;
+    }
+  }
+
+  .options {
+    position: absolute;
+    top: calc(100% + 10px);
+    border-radius: 8px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+    width: 100%;
+    z-index: 3;
+    background-color: var(--gray-scale-white-style);
+    overflow: hidden;
+  }
+
+  .optionsBackDrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: transparent;
+    z-index: 2;
+  }
+
+  &__active {
+    border: 1px solid #7e8187;
+
+    .field-label {
+      font-size: 8px;
+      color: #7e8187;
+      top: 0;
+      right: 12px;
+      z-index: 1;
+    }
+  }
+
+  &__invalid {
+    border: 1px solid #ef5350;
+  }
+
+  &__hi130 {
+    min-height: 130px;
+  }
+
+  &.textarea {
+    min-height: 200px;
+  }
+
+  &.disable {
+    background: #f9fbfe;
+    border: 1px solid #dde4ef;
+
+    .field-label {
+      &::after {
+        display: none;
+      }
+    }
+
+    &__active {
+      .field-label {
+        &::after {
+          display: unset;
+        }
+      }
+    }
+  }
+
+  &.ltrField {
+    .field-value {
+      direction: ltr;
+    }
+  }
+
+  &:hover {
+    border: 1px solid #7e8187;
+  }
+}
+
+option {
+  color: black;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.formFieldAction {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray-scale-medium-style);
+  outline: 0;
+  cursor: pointer;
+  font-size: 10px;
+  transition: all linear 250ms;
+
+  &.active {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.filedHelp {
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1;
+  color: #7e8187;
+  margin-bottom: 10px;
+
+  &__invalid {
+    color: #e55555;
+  }
+}
