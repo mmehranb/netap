@@ -9,6 +9,7 @@
 
 # Dependencies
 /node_modules
+/netap-api/node_modules
 
 # Cordova
 /www
